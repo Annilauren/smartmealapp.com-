@@ -3,69 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SmartMeal - Digitaalinen ostoslista, joka yhdistää reseptit, sosiaalisen median ja puheohjauksen.">
     <title>SmartMeal - Tulevaisuuden ostoslista</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #333333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 60px;
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #F5F5F5;
+        }
+
+        header .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #333333;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #A8E6A3, #FFFFFF);
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .hero-text .cta {
+            display: flex;
+            gap: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: #A8E6A3;
+        }
+
+        .hero-image img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .features {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .features .feature-list {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .feature img {
+            max-width: 60px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #F5F5F5;
+            font-size: 14px;
+            color: #666666;
+        }
+    </style>
 </head>
 <body>
-    <!-- Ylävalikko -->
     <header>
-        <div class="navbar">
-            <div class="logo">SmartMeal</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Etusivu</a></li>
-                    <li><a href="features.html">Ominaisuudet</a></li>
-                    <li><a href="download.html">Lataa</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="logo">SmartMeal</div>
+        <nav>
+            <a href="features.html">Ominaisuudet</a>
+            <a href="download.html">Lataa</a>
+        </nav>
     </header>
 
-    <!-- Hero-alue -->
     <section class="hero">
-        <div class="hero-content">
+        <div class="hero-text">
             <h1>SmartMeal – Tulevaisuuden ostoslista!</h1>
-            <p>Tutustu SmartMeal-sovellukseen – digitaalinen ostoslista, joka yhdistää reseptit, sosiaalisen median ja puheohjauksen yhdeksi kokonaisuudeksi.</p>
-            <div class="cta-buttons">
-                <a href="features.html" class="btn">Tutustu ominaisuuksiin</a>
-                <a href="download.html" class="btn btn-secondary">Lataa sovellus</a>
+            <p>SmartMeal on uusi digitaalinen ostoslista, joka yhdistää reseptit, sosiaalisen median ja puheohjauksen yhdeksi kokonaisuudeksi.</p>
+            <div class="cta">
+                <a href="features.html">Tutustu ominaisuuksiin</a>
+                <a href="download.html">Lataa sovellus</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="mockup_smartmeal_app.jpg" alt="SmartMeal-sovellus mockup">
+            <img src="mockup_smartmeal_app.jpg" alt="SmartMeal-sovelluksen mockup">
         </div>
     </section>
 
-    <!-- Tärkeimmät ominaisuudet -->
-    <section class="features-overview">
-        <h2>SmartMeal tekee arjesta helpompaa</h2>
-        <div class="features-list">
+    <section class="features">
+        <h2>Tärkeimmät ominaisuudet</h2>
+        <div class="feature-list">
             <div class="feature">
-                <img src="shopping_list_icon.png" alt="Ostoslista-ikoni">
-                <h3>Digitaalinen ostoslista</h3>
-                <p>Lisää ostokset helposti ja seuraa listaa suoraan sovelluksesta.</p>
+                <img src="shopping_list_icon.png" alt="Ostoslista-kuvake">
+                <p>Digitaalinen ostoslista</p>
             </div>
             <div class="feature">
-                <img src="tiktok_icon.png" alt="TikTok-integraation ikoni">
-                <h3>Reseptien lisäys</h3>
-                <p>Kopioi reseptejä ja siirrä ainesosat suoraan ostoslistalle yhdellä klikkauksella.</p>
+                <img src="tiktok_icon.png" alt="TikTok-kuvake">
+                <p>TikTok-integraatio</p>
             </div>
             <div class="feature">
-                <img src="voice_command_icon.png" alt="Puheohjauksen ikoni">
-                <h3>Puheohjaus</h3>
-                <p>Lisää ostoksia äänikomennoilla – helppoa ja nopeaa!</p>
+                <img src="voice_command_icon.png" alt="Puheohjaus-kuvake">
+                <p>Puheohjaus</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 SmartMeal. Kaikki oikeudet pidätetään.</p>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">TikTok</a>
-        </div>
+        &copy; 2025 SmartMeal. Kaikki oikeudet pidätetään.
     </footer>
 </body>
 </html>
